@@ -69,3 +69,16 @@ with open(file.txt) as f:
     for character in text:
         if character.islower():
             count += 1
+
+#a view in Django
+from django.http import HttpResponse
+import datetime
+ 
+def Current_datetime(request):
+     now = datetime.datetime.now()
+     html = "<html><body>It is now %s</body></html> % now
+     return HttpResponse(html)
+    
+#save an image locally using python whose URL address I already know
+import urllib.request
+urllib.request.urlretrieve("URL", "local-filename.jpg")
